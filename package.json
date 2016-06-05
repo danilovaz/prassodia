@@ -4,7 +4,8 @@
   "description": "A joke generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/index.test.js -w",
+    "test:once": "istanbul cover -x *.test.js _mocha -- -R spec tests/index.test.js"
   },
   "repository": {
     "type": "git",
@@ -14,6 +15,15 @@
     "generator",
     "joke"
   ],
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "ghooks": "1.2.1",
+    "istanbul": "0.4.3",
+    "mocha": "2.5.3"
+  },
   "author": "Danilo Vaz <danilovaz@hotmail.com.br> (http://danilovaz.github.io/)",
   "license": "MIT"
 }
